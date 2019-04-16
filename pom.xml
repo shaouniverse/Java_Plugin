@@ -21,7 +21,7 @@
   			<artifactId>maven-comiler-plugin</artifactId>
   			<version>2.3.2</version>
   			<configuration>
-  			<!-- source用来配置源代码使用的开发版本，
+  			<!--  source用来配置源代码使用的开发版本，
   			target用来配置需要生成的目标class文件的编译版本，
   			那么有些朋友可能会问为什么maven编译不使用class
   			将来被部署的环境的jdk版本：有时可能会因maven版本需求
