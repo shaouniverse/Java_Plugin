@@ -19,7 +19,7 @@ public class apachePOI {
      * 注意：同一行上的只能创建同一个行对象row  否则赋值的内容会被覆盖。
      */
 	public static void main(String[] args) {
-		
+		//
 		//1.创建一个webbook，对应一个Excel文件
         HSSFWorkbook wb = new HSSFWorkbook();
         //2.在建立的工作簿中添加一个sheet，对应Excell文件中的工作簿，并设置工作簿名称
