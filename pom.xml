@@ -8,11 +8,18 @@
   	<java.version>1.8</java.version>
   </properties>
   <dependencies>
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-context</artifactId>
-  		<version>4.1.6.RELEASE</version>
-  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context Spring依赖-->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.1.6.RELEASE</version>
+	</dependency>
+  	<!-- https://mvnrepository.com/artifact/commons-io/commons-io 文件及字节流、字符流的拷贝、创建等操作,简化代码结构-->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.6</version>
+	</dependency>
   </dependencies>
   <build>
   	<plugins>
