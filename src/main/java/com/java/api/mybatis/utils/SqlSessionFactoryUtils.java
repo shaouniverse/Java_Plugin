@@ -51,9 +51,13 @@ public class SqlSessionFactoryUtils {
 		synchronized (LOCK) {
 			//数据库连接池信息
 			PooledDataSource dataSource = new PooledDataSource();
-			dataSource.setDriver("com.mysql.cj.jdbc.Driver");
+			//com.mysql.cj.jdbc.Driver不使用这个会警告，但是不影响使用
+			dataSource.setDriver("com.mysql.jdbc.Driver");
 			dataSource.setUsername("root");
 			dataSource.setPassword("root");
+			//?serverTimezone=GMT%2B8   时间错误
+			//&amp;   与符号还有;
+			//useSSL=false  SSL报错
 			dataSource.setUrl("jdbc:mysql://localhost:3306/world?serverTimezone=GMT%2B8&amp;useSSL=false");
 			dataSource.setDefaultAutoCommit(false);
 			//采用MyBatis的JDBC事务方式
