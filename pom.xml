@@ -6,12 +6,29 @@
   
   
    	<dependencies>
+   		<!-- mybatis插件 -->
 	  	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
 		    <version>3.5.1</version>
 		</dependency>
+		
+		<!-- java的mysql连接器 -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.7-dmr</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.log4j/com.springsource.org.apache.log4j -->
+		<dependency>
+		    <groupId>org.apache.log4j</groupId>
+		    <artifactId>com.springsource.org.apache.log4j</artifactId>
+		    <version>1.2.16</version>
+		</dependency>
+		
   	</dependencies>
   
 </project>
