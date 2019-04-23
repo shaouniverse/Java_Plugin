@@ -33,7 +33,9 @@ public class SqlSessionFactoryUtils {
 				return sqlSessionFactory;
 			}
 			//String resource = "mybatis-config.xml";
-			String resource = "mybatis-config-property.xml";
+			//String resource = "mybatis-config-xml.xml";
+			String resource = "mybatis-config-properties.xml";
+			
 			InputStream inputStream;
 			try {
 				inputStream = Resources.getResourceAsStream(resource);
