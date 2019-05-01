@@ -14,12 +14,37 @@
 	    <artifactId>spring-context</artifactId>
 	    <version>5.1.6.RELEASE</version>
 	</dependency>
+	
   	<!-- https://mvnrepository.com/artifact/commons-io/commons-io 文件及字节流、字符流的拷贝、创建等操作,简化代码结构-->
 	<dependency>
 	    <groupId>commons-io</groupId>
 	    <artifactId>commons-io</artifactId>
 	    <version>2.6</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop Spring AOP支持 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>5.1.6.RELEASE</version>
+	</dependency>
+	
+	<!-- AspectJ是一个面向切面的框架，它扩展了Java语言。AspectJ定义了AOP语法，它有一个专门的编译器用来生成遵守Java字节编码规范的Class文件。
+	 -->
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+	
+
   </dependencies>
   <build>
   	<plugins>
