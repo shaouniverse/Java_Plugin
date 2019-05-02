@@ -40,10 +40,10 @@ public class ElConfig {
 	@Autowired
 	private Environment environment; //注入配置文件
 	
-	@Bean//注入配置文件
+/*	@Bean//注入配置文件
 	public static PropertySourcesPlaceholderConfigurer propertyConfigure() {
 		return new PropertySourcesPlaceholderConfigurer();
-	}
+	}*/ //不太明白没用啊
 	
 	public void outputResource() {
 		try {
