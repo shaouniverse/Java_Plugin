@@ -1,0 +1,6 @@
+Spring提供的Aware接口
+BeanNameAware   获得到容器中Bean的名称
+ApplicationContexAware*  当前的application context,这样可以调用容器的服务
+MessageSourceAware   获得message source,这样可以获得文本信息
+ApplicationEcentPublisherAware 应用时间发布器，可以发布事件
+ResourceLoaderAware 获得资源加载器，可以获得外部资源文件

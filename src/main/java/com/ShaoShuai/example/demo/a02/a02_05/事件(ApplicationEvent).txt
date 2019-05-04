@@ -1,0 +1,4 @@
+Spirng的事件需要遵循如下流程：
+自定义事件，集成ApplicationEvent.
+定义事件监听器，实现ApplicationListener.
+使用容器发布事件

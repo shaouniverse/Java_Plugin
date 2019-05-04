@@ -1,6 +1,99 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.java.api</groupId>
-  <artifactId>Java_Plugin</artifactId>
+  <groupId>com.springboot.study</groupId>
+  <artifactId>springboot_book</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<java.version>1.8</java.version>
+  </properties>
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context Spring依赖-->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.1.6.RELEASE</version>
+	</dependency>
+	
+  	<!-- https://mvnrepository.com/artifact/commons-io/commons-io 文件及字节流、字符流的拷贝、创建等操作,简化代码结构-->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.6</version>
+	    
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop Spring AOP支持 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>5.1.6.RELEASE</version>
+	</dependency>
+	
+	<!-- AspectJ是一个面向切面的框架，它扩展了Java语言。AspectJ定义了AOP语法，它有一个专门的编译器用来生成遵守Java字节编码规范的Class文件。
+	 -->
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+	
+	<!-- 增加 JSR250 支持 -->
+	<!-- https://mvnrepository.com/artifact/javax.annotation/jsr250-api -->
+	<dependency>
+	    <groupId>javax.annotation</groupId>
+	    <artifactId>jsr250-api</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	
+	<!-- Spring test 支持 -->
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>5.1.6.RELEASE</version><!--  <version>${spring-framework.version}</version> -->
+	    <!-- <scope>test</scope> --><!-- 在一个maven项目中，如果存在编译需要而发布不需要的jar包，可以用scope标签 -->
+	</dependency>
+	<!-- compile 默认的scope，表示 dependency 都可以在生命周期中使用。而且，这些dependencies 会传递到依赖的项目中。适用于所有阶段，会随着项目一起发布 -->
+	<!-- provided 跟compile相似，但是表明了dependency 由JDK或者容器提供，例如Servlet AP和一些Java EE APIs。这个scope 只能作用在编译和测试时，同时没有传递性 -->
+	<!-- runtime 表示dependency不作用在编译时，但会作用在运行和测试时，如JDBC驱动，适用运行和测试阶段。 -->
+	<!-- test 表示dependency作用在测试时，不作用在运行时。 只在测试时使用，用于编译和运行测试代码。不会随项目发布。 -->
+	<!-- system 跟provided 相似，但是在系统中要以外部JAR包的形式提供，maven不会在repository查找它。 -->
+	
+	<!-- https://mvnrepository.com/artifact/junit/junit -->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.13-beta-2</version>
+	    <!-- <scope>test</scope> -->
+	</dependency>
+	
+  </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-comiler-plugin</artifactId>
+  			<version>2.3.2</version>
+  			<configuration>
+  			<!--  source用来配置源代码使用的开发版本，
+  			target用来配置需要生成的目标class文件的编译版本，
+  			那么有些朋友可能会问为什么maven编译不使用class
+  			将来被部署的环境的jdk版本：有时可能会因maven版本需求
+  			或者其他一些插件需求，这些限制规定了我们必须在编译机器上使用
+  			比如说jdk7及其以上的版本，但是我们运行的环境使用的是jdk6，
+  			这时候就需要增加一个source参数来解决这个问题。 -->
+  				<source>${java.version}</source>
+  				<target>${java.version}</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
