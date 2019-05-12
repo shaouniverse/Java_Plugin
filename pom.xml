@@ -101,6 +101,12 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 			<version>2.5.3</version>
 		</dependency>
+		<!-- 上面包含下面 下面的仅支持json -->
+		<!-- <dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.3</version>
+		</dependency> -->
 
 		<!-- file upload -->
 		<dependency>
